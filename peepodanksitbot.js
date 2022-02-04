@@ -200,9 +200,15 @@ client.on("PRIVMSG", async (msg, self) => {
               Afilliate: ${response.data.roles.isAffiliate}, Partner: ${response.data.roles.isPartner}, Title:" ${response.data.lastBroadcast.title} " Age: ${humanize(accountage, {largest: 3})} `)
             } catch(e) {
                 client.privmsg(channel, `Couldn't find the user!`)}
+//----------------------------------------------------------------------------------------------------------------------------------------------//                
         }
         if (command === "asd"){
             client.me(channel, "asd")
+        }
+//----------------------------------------------------------------------------------------------------------------------------------------------//
+        if (command === "rp"){
+            const randomping = await axios.get (`https://2g.be/twitch/randomviewer.php?channel=${channel}`)
+            client.privmsg(channel, `peepoDankSit 🔔 ${randomping.data}`)
         }
 //----------------------------------------------------------------------------------------------------------------------------------------------//
        if (command === 'join') {
