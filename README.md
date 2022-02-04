@@ -1,4 +1,5 @@
-# peepoDankSitBotDIRC https://i.imgur.com/b3EzJKJ.png
+# peepoDankSitBotDIRC 
+![AUR last modified](https://img.shields.io/aur/last-modified/peepoDankSitBotDIRC)
 dank-twitch-irc version
 # peepoDankSitBotDIRC
 dank-twitch-irc version
