@@ -226,8 +226,9 @@ try {
         }
 //----------------------------------------------------------------------------------------------------------------------------------------------//
 //   HUWOBOT RAID NOTIFY
-if(msg.messageText.includes("A Raid Event at Level") && msg.messageText.includes("Type +join to join the raid!") && (msg.senderUsername === 'ryusan_')) 
+if(msg.messageText.includes("A Raid Event at Level") && msg.messageText.includes("Type +join to join the raid!") && (msg.senderUsername === 'huwobot')) 
 client.say("ryusan_", `peepoDankSit ⚔️ JOIN THE RAID! RyuSan_ 🛡️`)
+
 //----------------------------------------------------------------------------------------------------------------------------------------------//
        if (command === 'join') {
             if(`${userlow}` === 'ryusan_') {
