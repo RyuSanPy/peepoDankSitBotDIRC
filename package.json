@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "axios": "^0.25.0",
+    "dank-twitch-irc": "^4.3.0",
+    "dotenv": "^16.0.0",
+    "fs-extra": "^10.0.0",
+    "humanize-duration": "^3.27.1",
+    "perf_hooks": "^0.0.1"
+  },
+  "name": "bot-dank-twitch-irc",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon peepodanksitbot.js",
+    "start": "node peepodanksitbot.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
