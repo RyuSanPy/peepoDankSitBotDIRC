@@ -108,7 +108,7 @@ client.on("PRIVMSG", async (msg, self) => {
     let [commandR, ...argsR] = msg.messageText.slice(0).split(/ +/g); 
     let randomEmotes = [`Blessrng`, `forsenSWA`, `MenheraCheer`, `MenheraFight`, `PANIC`, `YuiSearch`, `notLikeThis`]
     let emoteRandom = randomEmotes[Math.floor(Math.random()*randomEmotes.length)];
-    if(message.includes("A Raid Event at Level") && message.includes("Type +join to join the raid!") && (msg.senderUsername === 'huwobot')) { client.say("ryusan_", `peepoDankSit ⚔️ JOIN THE RAID! RyuSan_ 🛡️ ${emoteRandom} lvl: ${argsR[4]}`) }
+    if(message.includes("A Raid Event at Level") && message.includes("Type +join to join the raid!") && (msg.senderUsername === 'huwobot')) { client.say("ryusan_", `peepoDankSit ⚔️ JOIN THE RAID! RyuSan_ 🛡️ lvl: ${argsR[4]} ${emoteRandom}`) }
     }
     // RAID LOST
     {
