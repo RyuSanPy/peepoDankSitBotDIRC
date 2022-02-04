@@ -1,3 +1,7 @@
 node_modules
+<<<<<<< HEAD
 .env
 updatebot.bat
+=======
+.env
+>>>>>>> e846c2127eeefbbdb5c57e2004b8814334b671b8
