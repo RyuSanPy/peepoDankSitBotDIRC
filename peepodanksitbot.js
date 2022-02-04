@@ -136,7 +136,7 @@ client.on("PRIVMSG", async (msg, self) => {
     }
 //----------------------------------------------------------------------------------------------------------------------------------------------//    
     if (command === "commands"){
-        client.privmsg(channel, `peepoDankSit here are the commands pastebin.com/R3Y22NwE`)
+        client.privmsg(channel, `peepoDankSit commands here https://github.com/RyuSanPy/peepoDankSitBotDIRC`)
     }
 //----------------------------------------------------------------------------------------------------------------------------------------------//    
     if (command === "clear"){
@@ -215,9 +215,7 @@ try {
         }
 //----------------------------------------------------------------------------------------------------------------------------------------------//
 //   HUWOBOT RAID NOTIFY
-if(msg.messageText.includes("A Raid Event at Level") 
-  && msg.messageText.includes("Type +join to join the raid!") 
-    && (msg.senderUsername === 'huwobot')) 
+if(msg.messageText.includes("A Raid Event at Level") && msg.messageText.includes("Type +join to join the raid!") && (msg.senderUsername === 'ryusan_')) 
 client.say("ryusan_", `peepoDankSit ⚔️ JOIN THE RAID! RyuSan_ 🛡️`)
 //----------------------------------------------------------------------------------------------------------------------------------------------//
        if (command === 'join') {
