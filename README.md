@@ -7,7 +7,7 @@ dank-twitch-irc version
 asd
 
 
-| Commands | asd |
+| Commands |  |
 | --- | --- |
 | ping | test |
 | test | asd |
