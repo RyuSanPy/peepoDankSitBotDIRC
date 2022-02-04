@@ -87,6 +87,13 @@ client.on("PRIVMSG", async (msg, self) => {
     let mods = msg.badges.hasModerator
     let vips = msg.badges.hasVIP
     
+    const commandName = message.trim();
+
+    // NO PREFIx COMMANDS
+
+    if (commandName === "peepoDankSit") {
+        client.privmsg(channel, `peepoDankSit`);
+    }
 
     // PREFIX
 
