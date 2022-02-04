@@ -94,9 +94,34 @@ client.on("PRIVMSG", async (msg, self) => {
     if (commandName === "peepoDankSit") {
         client.privmsg(channel, `peepoDankSit`);
     }
-    
-    if(message.includes("A Raid Event at Level") && message.includes("Type +join to join the raid!") && (msg.senderUsername === 'huwobot')) { client.say("ryusan_", `peepoDankSit ⚔️ JOIN THE RAID! RyuSan_ 🛡️`) } 
+    let [commandR, ...argsR] = msg.messageText.slice(0).split(/ +/g);
+// just for the huwobot raid lvl lol
+    if (commandR === 'asdasd') {
+        client.privmsg(channel, `${argsR[3]} test`)
+    }
 
+    if (message.includes('drshdhds')) { 
+        client.privmsg(channel, `YAAdrhAY ${args[6]}`)
+    } 
+    //RAID NOTIFY
+    {
+    let [commandR, ...argsR] = msg.messageText.slice(0).split(/ +/g); 
+    let randomEmotes = [`Blessrng`, `forsenSWA`, `MenheraCheer`, `MenheraFight`, `PANIC`, `YuiSearch`, `notLikeThis`]
+    let emoteRandom = randomEmotes[Math.floor(Math.random()*randomEmotes.length)];
+    if(message.includes("A Raid Event at Level") && message.includes("Type +join to join the raid!") && (msg.senderUsername === 'huwobot')) { client.say("ryusan_", `peepoDankSit ⚔️ JOIN THE RAID! RyuSan_ 🛡️ ${emoteRandom} lvl: ${argsR[4]}`) }
+    }
+    // RAID LOST
+    {
+    let randomEmotes = [`BLUBBERS`, `sadface`, `FeelsWeakMan`, `menheraPain`, `peeposad`, `pokiSad`, `pepeW`, `XyliPizdish aaa`, `ApuDown`, `SadSipPepeDank`, `PepeHands`, `Sadeg`, `MenheraPats`, `pokiKick`, `pokiSlam`, `PoroRoast`];
+    let emoteRandom = randomEmotes[Math.floor(Math.random()*randomEmotes.length)];
+    if(message.includes("users failed to beat the raid level") && message.includes("No experience rewarded! 💀") && (msg.senderUsername === 'huwobot')) { client.say("ryusan_", `Raid lost ${emoteRandom} `) }
+    }
+    // RAID BEATED
+    {
+    let randomEmotes = [`DANKIES`, `KleePls`, `koronePls`, `MenheraHappy`, `MenheraSpin`, `MenheraYeah`, `peepoTreat`, `YAAAY`, `peepoHappy`, `ApuYump`];
+    let emoteRandom = randomEmotes[Math.floor(Math.random()*randomEmotes.length)];
+    if(message.includes("users beat the raid level") && message.includes("experience rewarded! 💎") && (msg.senderUsername === 'huwobot')) { client.say("ryusan_", `Raid beated! ${emoteRandom}`) }
+    }
     // PREFIX
 
     const prefix = "peepoDankSit "
@@ -219,7 +244,10 @@ try {
 //----------------------------------------------------------------------------------------------------------------------------------------------//                
 
         if (command === "asd"){
-            client.me(channel, "asd")
+           let randomEmotes = ['asd', 'lol', 'xd'];
+           let emoteRandom = randomEmotes[Math.floor(Math.random()*randomEmotes.length)];
+        
+            client.say(channel, `${emoteRandom}`);
         }
 //----------------------------------------------------------------------------------------------------------------------------------------------//
         if (command === "rp"){
