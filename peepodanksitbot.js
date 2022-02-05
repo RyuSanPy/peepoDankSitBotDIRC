@@ -114,13 +114,13 @@ client.on("PRIVMSG", async (msg, self) => {
     {
     let randomEmotes = [`BLUBBERS`, `sadface`, `FeelsWeakMan`, `menheraPain`, `peeposad`, `pokiSad`, `pepeW`, `XyliPizdish aaa`, `ApuDown`, `SadSipPepeDank`, `PepeHands`, `Sadeg`, `MenheraPats`, `pokiKick`, `pokiSlam`, `PoroRoast`];
     let emoteRandom = randomEmotes[Math.floor(Math.random()*randomEmotes.length)];
-    if(message.includes("users failed to beat the raid level") && message.includes("No experience rewarded! 💀") && (msg.senderUsername === 'huwobot')) { client.say("ryusan_", `Raid lost ${emoteRandom} `) }
+    if(message.includes("users failed to beat the raid level ") && message.includes("No experience rewarded! 💀") && (msg.senderUsername === 'huwobot')) { client.say("ryusan_", `Raid lost ${emoteRandom} `) }
     }
     // RAID BEATED
     {
     let randomEmotes = [`DANKIES`, `KleePls`, `koronePls`, `MenheraHappy`, `MenheraSpin`, `MenheraYeah`, `peepoTreat`, `YAAAY`, `peepoHappy`, `ApuYump`];
     let emoteRandom = randomEmotes[Math.floor(Math.random()*randomEmotes.length)];
-    if(message.includes("users beat the raid level") && message.includes("experience rewarded! 💎") && (msg.senderUsername === 'huwobot')) { client.say("ryusan_", `Raid beated! ${emoteRandom}`) }
+    if(message.includes("users beat the raid level ") && message.includes("experience rewarded! 💎") && (msg.senderUsername === 'huwobot')) { client.say("ryusan_", `Raid beated! ${emoteRandom}`) }
     }
     // PREFIX
 
