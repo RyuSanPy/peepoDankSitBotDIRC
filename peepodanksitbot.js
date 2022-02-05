@@ -108,19 +108,19 @@ client.on("PRIVMSG", async (msg, self) => {
     let [commandR, ...argsR] = msg.messageText.slice(0).split(/ +/g); 
     let randomEmotes = [`Blessrng`, `forsenSWA`, `MenheraCheer`, `MenheraFight`, `PANIC`, `YuiSearch`, `notLikeThis`]
     let emoteRandom = randomEmotes[Math.floor(Math.random()*randomEmotes.length)];
-    if(message.includes("A Raid Event at Level") && message.includes("Type +join to join the raid!") && (msg.senderUsername === 'huwobot')) { client.say("ryusan_", `peepoDankSit ⚔️ JOIN THE RAID! RyuSan_ 🛡️ lvl: ${argsR[4]} ${emoteRandom}`) }
+    if(message.includes("A Raid Event at Level ") && message.includes("Type +join to join the raid! ") && (msg.senderUsername === 'huwobot')) { client.say("ryusan_", `peepoDankSit ⚔️ JOIN THE RAID! RyuSan_ 🛡️ lvl: ${argsR[4]} ${emoteRandom}`) }
     }
     // RAID LOST
     {
     let randomEmotes = [`BLUBBERS`, `sadface`, `FeelsWeakMan`, `menheraPain`, `peeposad`, `pokiSad`, `pepeW`, `XyliPizdish aaa`, `ApuDown`, `SadSipPepeDank`, `PepeHands`, `Sadeg`, `MenheraPats`, `pokiKick`, `pokiSlam`, `PoroRoast`];
     let emoteRandom = randomEmotes[Math.floor(Math.random()*randomEmotes.length)];
-    if(message.includes("users failed to beat the raid level ") && message.includes("No experience rewarded! 💀") && (msg.senderUsername === 'huwobot')) { client.say("ryusan_", `Raid lost ${emoteRandom} `) }
+    if(message.includes("users failed to beat the raid level ") && message.includes("No experience rewarded") && (msg.senderUsername === 'huwobot')) { client.say("ryusan_", `peepoDankSit Raid lost ${emoteRandom} `) }
     }
     // RAID BEATED
     {
     let randomEmotes = [`DANKIES`, `KleePls`, `koronePls`, `MenheraHappy`, `MenheraSpin`, `MenheraYeah`, `peepoTreat`, `YAAAY`, `peepoHappy`, `ApuYump`];
     let emoteRandom = randomEmotes[Math.floor(Math.random()*randomEmotes.length)];
-    if(message.includes("users beat the raid level ") && message.includes("experience rewarded! 💎") && (msg.senderUsername === 'huwobot')) { client.say("ryusan_", `Raid beated! ${emoteRandom}`) }
+    if(message.includes("users beat the raid level ") && message.includes("experience rewarded") && (msg.senderUsername === 'huwobot')) { client.say("ryusan_", `peepoDankSit Raid beated! ${emoteRandom}`) }
     }
     // PREFIX
 
@@ -164,10 +164,14 @@ client.on("PRIVMSG", async (msg, self) => {
         client.privmsg(channel, `peepoDankSit 🦝 ${responserac.data.url}`)
     }
 //----------------------------------------------------------------------------------------------------------------------------------------------//    
+    try {
     if (command === "r/"){
     const responsereddit = await axios.get (`https://meme-api.herokuapp.com/gimme/${args[0]}`)
     client.privmsg(channel, `peepoDankSit random r/${args[0]} post ${responsereddit.data.url}`)
-    }
+}}
+ catch(e) {
+        client.privmsg(channel, `peepoDankSit couldn't find the subreddit!`)
+}
 //----------------------------------------------------------------------------------------------------------------------------------------------//    
     if (command === "commands"){
         client.privmsg(channel, `peepoDankSit commands here https://github.com/RyuSanPy/peepoDankSitBotDIRC`)
