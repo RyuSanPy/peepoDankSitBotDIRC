@@ -1,5 +1,5 @@
 node_modules
 .env
-updatebot
-peepodanksitbot
-index
+updatebot.js
+peepodanksitbot.js
+index.js
