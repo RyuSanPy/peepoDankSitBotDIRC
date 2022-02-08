@@ -1,5 +1,6 @@
 require('dotenv').config();
 const axios=require('axios')
+const cooldown = require("./lib/utils/cooldown.js")
 const humanize = require('humanize-duration');
 const { ChatClient, AlternateMessageModifier, SlowModeRateLimiter } = require("dank-twitch-irc");
 const myHumanizer = humanize.humanizer({
@@ -90,10 +91,12 @@ client.on("PRIVMSG", async (msg, self) => {
     const commandName = message.trim();
 
     // NO PREFIx COMMANDS
-
-    if (commandName === "peepoDankSit") {
+{
+    if (commandName === "peepoDankSit")
+     {
         client.privmsg(channel, `peepoDankSit`);
     }
+}
     let [commandR, ...argsR] = msg.messageText.slice(0).split(/ +/g);
 // just for the huwobot raid lvl lol
     if (commandR === 'asdasd') {
@@ -121,6 +124,10 @@ client.on("PRIVMSG", async (msg, self) => {
     let randomEmotes = [`DANKIES`, `KleePls`, `koronePls`, `MenheraHappy`, `MenheraSpin`, `MenheraYeah`, `peepoTreat`, `YAAAY`, `peepoHappy`, `ApuYump`];
     let emoteRandom = randomEmotes[Math.floor(Math.random()*randomEmotes.length)];
     if(message.includes("users beat the raid level ") && message.includes("experience rewarded") && (msg.senderUsername === 'huwobot')) { client.say("ryusan_", `peepoDankSit Raid beated! ${emoteRandom}`) }
+    }
+    // Okayeg reminder
+    {
+    if(message.includes("=eg") && (msg.senderUsername === 'ryusan_')) {client.say("ryusan_", '$remind RyuSan_ in 60m Okayeg 🥚')}
     }
     // PREFIX
 
@@ -246,19 +253,51 @@ try {
     client.privmsg(channel, `Couldn't find the user!`)
 }
 //----------------------------------------------------------------------------------------------------------------------------------------------//                
+if (command === "asd"){
+    let randomEmotes = ['asd', 'lol', 'xd'];
+    let emoteRandom = randomEmotes[Math.floor(Math.random()*randomEmotes.length)];
+    
+    client.say(channel, `${emoteRandom}`);
+}
 
-        if (command === "asd"){
-           let randomEmotes = ['asd', 'lol', 'xd'];
-           let emoteRandom = randomEmotes[Math.floor(Math.random()*randomEmotes.length)];
-        
-            client.say(channel, `${emoteRandom}`);
-        }
+
+
+let data = `${args.join(' ')}`;
+title = '';
+artist = '';
+let info = data.split(' - ');
+title = info[0]
+artist = info[1]
+
+if (command === 'lol'){ 
+
+
+} 
+
+
+
+//----------------------------------------------------------------------------------------------------------------------------------------------//   
+
+    if (command === 'lyrics'){
+        const song = require("@allvaa/get-lyrics");
+
+        (async () => {
+            const result = await song(`${args.join(' ')}`);
+            console.log(result); // returns Song object
+            client.say(channel, `${result.title} Genius: ${result.geniusUrl}`)
+        // Falta poner algo para que el bot diga que no se encontro una cancion porque sino se crashea
+            client.say(channel, `Lyrics WIP`)
+            
+        })();
+    }
+
+
+
 //----------------------------------------------------------------------------------------------------------------------------------------------//
         if (command === "rp"){
             const randomping = await axios.get (`https://2g.be/twitch/randomviewer.php?channel=${channel}`)
             client.privmsg(channel, `peepoDankSit 🔔 ${randomping.data}`)
         }
-//----------------------------------------------------------------------------------------------------------------------------------------------//
 //----------------------------------------------------------------------------------------------------------------------------------------------//
        if (command === 'join') {
             if(`${userlow}` === 'ryusan_') {
