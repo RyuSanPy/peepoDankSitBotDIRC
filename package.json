@@ -8,6 +8,7 @@
     "fs-extra": "^10.0.0",
     "genius-lyrics-api": "^3.2.0",
     "genius-lyrics-scrape": "^1.2.0",
+    "got": "^12.0.1",
     "humanize-duration": "^3.27.1",
     "musicmatch": "^0.3.2",
     "perf_hooks": "^0.0.1",
