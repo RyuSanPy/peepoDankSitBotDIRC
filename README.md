@@ -21,4 +21,4 @@ Twitch bot made by: [RyuSan_](https://twitch.tv/ryusan_)
 |Difference|dif|Calculate the difference between two numbers, mainly for minecraft speedruns |
 |Distance|dis|Calculate the stronghold distance with the difference obtained before|
 |Lyrics|lyrics| Genius page from a song and the cover image
-|Cute animals|Cute|Returns a cute image from some subreddits
+|Cute animals|Cute|Sends a cute image from some subreddits
