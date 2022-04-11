@@ -1,14 +1,16 @@
-const axios = require("axios");
-try {
-  exports.run = async(client, message, args, user, channel, self) => {
+if (command === "r/") {
+   try {
       const responsereddit = await axios.get(
-        `https://meme-api.herokuapp.com/gimme/${args[0]}`
+         `https://meme-api.herokuapp.com/gimme/${args[0]}`
       );
-      client.privmsg(
-        channel,
-        `peepoDankSit random r/${args[0]} post ${responsereddit.data.url}`
-      );
-    }
-  } catch (e) {
-    client.privmsg(channel, `peepoDankSit couldn't find the subreddit!`);
-  }
+      if (responsereddit.data.nsfw === true) {
+         return client.say(channel, `${user} nsfw post`);
+      } else
+         client.say(
+            channel,
+            `peepoDankSit r/${args[0]} post ${responsereddit.data.url}`
+         );
+   } catch (error) {
+      client.say(channel, `Subreddit not found`);
+   }
+}

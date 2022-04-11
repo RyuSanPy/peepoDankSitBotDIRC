@@ -1,0 +1,11 @@
+   if (command === "leavechannel") {
+      if (msg.senderUsername !== "ryusan_") return;
+      client.say(channel, `Leaving channel: @${args[0]}`);
+      client.part(args[0]);
+   }
+
+   if (command === "leave" && msg.badges.hasBroadcaster) {
+      client.say(channel, `Leaving channel: ${channel}`);
+      client.part(channel);
+      fs.readFile("channels.txt");
+   }

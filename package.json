@@ -1,22 +1,14 @@
 {
   "dependencies": {
     "@allvaa/get-lyrics": "^1.1.4",
-    "@alufi/lyrics-api": "^1.0.0-dev",
     "axios": "^0.25.0",
     "dank-twitch-irc": "^4.3.0",
     "dotenv": "^16.0.0",
     "fs-extra": "^10.0.0",
-    "genius-lyrics-api": "^3.2.0",
-    "genius-lyrics-scrape": "^1.2.0",
-    "got": "^12.0.1",
+    "got": "^11.8.3",
     "humanize-duration": "^3.27.1",
-    "musicmatch": "^0.3.2",
     "perf_hooks": "^0.0.1",
-    "quicklyrics": "^1.0.2",
-    "react": "^17.0.2",
-    "simple-genius-lyrics-scraper": "^1.0.2",
-    "song-lyrics-api": "^1.1.0",
-    "songlyrics": "^2.2.4"
+    "react": "^17.0.2"
   },
   "name": "bot-dank-twitch-irc",
   "version": "1.0.0",

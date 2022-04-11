@@ -1,27 +1,32 @@
-exports.run = (client, message, args, user, channel, self) => {
-    if (`${userlow}` === "ryusan_") {
+const fs = require("fs-extra");
+if (command === "join") {
+   if (`${userlow}` === "ryusan_") {
       client.join(`${args[0].toLowerCase()}`);
       let content = " " + args[0].toLowerCase();
-      fs.writeFile("channels.txt", content, { flag: "a+" }, (err) => {});
+      fs.writeFile(
+         "channels.txt",
+         content,
+         {
+            flag: "a+",
+         },
+         (err) => {}
+      );
       client.me(
-        channel,
-        `${user}, entrando en el canal: "${args[0].toLowerCase()}" FeelsOkayMan`
+         channel,
+         `${user}, Entering to: "${args[0].toLowerCase()}" channel :D`
       );
       client.privmsg(
-        `${args[0].toLowerCase()}`,
-        `peepoDankSit 🔔 @${args[0].toLowerCase()} Prefijo: peepoDankSit`
+         `${args[0].toLowerCase()}`,
+         `peepoDankSit 🔔 @${args[0].toLowerCase()} Prefix: peepoDankSit`
       );
-    } else {
+   } else {
       if (channel === "peepoDankSitBot") {
-        client.privmsg(
-          channel,
-          `${user}, espera a que el creador del bot revise tu solicitud SeemsGood`
-        );
+         client.privmsg(channel, `${user}, Wait peepoDankSit`);
       } else {
-        client.privmsg(
-          channel,
-          `${user}, este comando solo está disponible en el chat del bot DinkDonk`
-        );
+         client.privmsg(
+            channel,
+            `${user}, This command only works in the bot chat peepoDankSit`
+         );
       }
-    }
+   }
 }
