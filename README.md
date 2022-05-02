@@ -21,6 +21,6 @@ Twitch bot made by: [RyuSan_](https://twitch.tv/ryusan_)
 |Tuck|tuck|Tucks a user to bed ![bedge](https://cdn.frankerfacez.com/emoticon/627915/1)|
 |Difference|dif|Calculate the difference between two numbers, mainly for minecraft speedruns |
 |Distance|dis|Calculate the stronghold distance with the difference obtained before|
-|Lyrics|lyrics| Lyrics for the song
+|Lyrics|lyrics (song)| Lyrics for the song
 |Cute animals|Cute|Sends a cute image from some subreddits
 |Song|song| [Songwhip](https://songwhip.com/create?q=ew) link
