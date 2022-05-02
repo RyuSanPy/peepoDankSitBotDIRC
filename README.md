@@ -14,11 +14,13 @@ Twitch bot made by: [RyuSan_](https://twitch.tv/ryusan_)
 |Random dog|dog|Sends a random image of a dog 🐶|
 |Random raccoon|rac|Sends a random image of a raccoon 🦝|
 |Random bunny|bunny|Sends a random image of a bunny 🐰|
+|Random ferret|ferret|Sends a random image of a ferret|
 |Offline viewers|ov|Sends how much viewers are in chat on that moment|
 |Yourmom|yourmom|Sends a picture of your mom ![xd](https://cdn.frankerfacez.com/emoticon/412807/1) loooool|
 |Reddit|r/ [sub]|Random post from a subreddit|
 |Tuck|tuck|Tucks a user to bed ![bedge](https://cdn.frankerfacez.com/emoticon/627915/1)|
 |Difference|dif|Calculate the difference between two numbers, mainly for minecraft speedruns |
 |Distance|dis|Calculate the stronghold distance with the difference obtained before|
-|Lyrics|lyrics| Genius page from a song and the cover image
+|Lyrics|lyrics| Lyrics for the song
 |Cute animals|Cute|Sends a cute image from some subreddits
+|Song|song| [Songwhip](https://songwhip.com/create?q=ew) link
